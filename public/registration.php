@@ -106,6 +106,13 @@ session_start();
                     if ($prepareStmt) {
                         mysqli_stmt_bind_param($stmt,"sssssss",$fullName, $phoneNumber, $email, $address, $username, $passwordHash, $role);
                         mysqli_stmt_execute($stmt);
+                        $user_id = mysqli_insert_id($db);
+                        if ($role == "nanny") {
+                            $stmt_nannies = mysqli_prepare($db, "INSERT INTO nannies (user_id) VALUES (?)");
+                            mysqli_stmt_bind_param($stmt_nannies, "i", $user_id);
+                            mysqli_stmt_execute($stmt_nannies);
+                            mysqli_stmt_close($stmt_nannies);
+                        }
                     echo "<div class='alert-success'>You are registered successfully. Please proceed to login.</div>";
                     } else {
                     die("Something went wrong");
