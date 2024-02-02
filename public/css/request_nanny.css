@@ -1,0 +1,38 @@
+.nannies__container {
+    margin: 8rem 7rem 0;
+    background-color: #D2E0FB;
+    border-radius: 1rem;
+}
+
+.nanny {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 7rem;
+    background-color: #D2E0FB;
+}
+
+.nanny > h3, .nanny > p {
+    background-color: #D2E0FB;
+}
+
+.nanny > p {
+    padding: 1rem 1.5rem;
+}
+
+hr {
+    width: inherit;
+    height: 4px;
+    border: none;
+}
+
+.ui-dialog, .ui-corner-all, .ui-widget, .ui-widget-content, .ui-front, .ui-dialog-buttons, .ui-draggable, .ui-datepicker-title, .ui-datepicker-calendar, .date-range-picker, .ui-dialog-buttonset, .ui-dialog-title, .ui-datepicker-month, .ui-datepicker-year, .ui-icon {
+    background-color: #D2E0FB;
+    border: none;
+    color: #192C4F;
+}
+.ui-widget-header {
+    border:none;
+    background: #D2E0FB;
+}
